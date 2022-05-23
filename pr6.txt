@@ -1,0 +1,72 @@
+1)
+#include <iostream>
+using namespace std;
+int main()
+{
+    char b = 0;
+    char a = 0;
+    cout << "      0     1     2     3     4     5     6     7     8     9     A     B     C     D     E     F" << endl;
+    for(int i = 1; i<16; i++){
+        b = i + 55;
+        if (i<10)
+            cout << i << "     ";
+        else
+            cout << b << "     ";
+        for(int j = 0; j<16; j++){
+            a = i*16 + j;
+            cout << a;
+            if(a/100 == 0){
+                cout << "     ";
+            }
+            else{
+                cout << "     ";
+            }
+        }
+        cout << endl;
+    }
+}
+
+2)
+struct expression
+{
+  double a;
+  double b;
+  char operation;
+};
+
+expression convert(string s)
+{
+  string s1, s2;
+  char op;
+  int i = 0,n = 0;
+  while (s[i])
+  {
+    n++;
+    i++;
+  }
+  string NewS;
+  int N = 0;
+  for (int i = 0; i < n; i++)
+  {
+    int j = 0;
+    if (s[i] != ' ') { N++; }
+    else
+      NewS[i] = s[j];
+    j++;
+  }
+  int ptr = 1;
+  for (int i = 0; i < n - N; i++)
+    if (NewS[i] != '+' && NewS[i] != '-' && NewS[i] != '*' && NewS[i] != '/' && (ptr == 1))
+    {
+      s1[i] = NewS[i];
+    }
+    else if (NewS[i] != '+'  NewS[i] != '-'  NewS[i] != '*' || NewS[i] != '/')
+    {
+      op = NewS[i];
+      ptr = 0;
+    }
+    else
+    {
+      s2[i] = NewS[i];
+    }
+}
